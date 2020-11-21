@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
-  get 'tasks/index'
   root "tasks#index"
+  resources :tasks
+  # resources :users, only: [:edit, :update, :show]
+  # resources :groups, only: [:new, :create]
 end
