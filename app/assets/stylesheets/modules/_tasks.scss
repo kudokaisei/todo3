@@ -1,0 +1,304 @@
+body {
+  background-image: url("http://aquabeauties.com/wp-content/uploads/2020/09/B83A85A4-2A86-4957-B821-FBEE7332BA68.jpg");
+  background-size: 100% 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+  &__name {
+    color: rgb(157, 247, 139);
+    font-size: 36px;
+    line-height: 70px;
+    font-weight: 900;
+    font-family: Comic Sans MS;
+    margin-left: 20px;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  ul {
+
+    .heder__info {
+      color: rgb(173, 184, 247);
+      font-size: 28px;
+      line-height: 70px;
+      font-weight: 600;
+      font-family: Comic Sans MS;
+      margin-right: 50px;
+    }
+
+    li {
+      position: relative;
+      float: left;
+      width: 100%;
+      height: 55px;
+
+      a {
+        display: block;
+        line-height: 40px;
+        color: rgb(157, 247, 139);
+
+        &:hover {
+          background: white;
+          color: black;
+        }
+      }
+
+      ul {
+        position: absolute;
+        z-index: 100;
+        top: 100%;
+        left: 0;
+        width: 200px;
+
+        li {
+          overflow: hidden;
+          width: 100%;
+          height: 0;
+          background: rgb(173, 184, 247);
+
+          a {
+            display: block;
+            color:  white;
+            font-size: 20px;
+          }
+        }
+      }
+
+      &:hover > ul > li {
+        overflow: visible;
+        height: 40px;
+      }
+
+      ul:before {
+        position: absolute;
+        content: "";
+        top: -20px;
+        right: 16px;
+        width: 0;
+        height: 0;
+        border: 6px solid transparent;
+        border-top-color: rgb(173, 184, 247);
+      }
+
+      &:hover ul:before {
+        border-top-color: white;
+      }
+    }
+  }
+}
+
+
+.Task {
+  display: flex;
+  height: calc(100vh - 100px);
+  .task-group {
+    width: 250px;
+    border: groove 5px skyblue;
+    p {
+      color: yellow;
+      font-size: 18px;
+      margin: 5px 0 5px 5px;
+    }
+  }
+  .task-info {
+    width: 200px;
+    border: groove 5px skyblue;
+    p {
+      color: yellow;
+      font-size: 18px;
+      margin: 5px 0 5px 5px;
+    }
+    .form-text {
+      width: 190px;
+      margin: 0px 5px 0 5px;
+    }
+    .form-detalis {
+      white-space: pre-wrap;
+      height: 450px;
+      width: 190px;
+      margin: 10px 5px 0 5px;
+    }
+    .form-submit {
+      margin: 10px 10px 0 10px;
+      width: 180px;
+      display       : inline-block;
+      border-radius : 20%;
+      font-size     : 22px;
+      text-align    : center;
+      cursor        : pointer;
+      padding       : 8px 0px;
+      background    : #ffff1a;
+      color         : #000000;
+      line-height   : 1em;
+      transition    : .3s;
+      box-shadow    : 4px 4px 7px #666666;
+      border        : 2px solid #ffff1a;
+    }
+    .form-submit:hover {
+      box-shadow    : none;
+      color         : #ffff1a;
+      background    : #000000;
+    }
+  }
+  .task-content {
+    width: 700px;
+    border: groove 5px skyblue;
+    .task-name {
+      color: yellow;
+      font-size: 18px;
+      margin: 5px 0 5px 10px;
+    }
+    .content {
+      display: flex;
+      .content-main {
+        background-color:#00FFFF;
+        opacity: 0.8;
+        width: 180px;
+        margin: 10px 0 0 10px;
+        padding: 5px;
+        .edit {
+          list-style: none;
+          text-decoration: none;
+          color: blue;
+        }
+        .delete {
+          list-style: none;
+          text-decoration: none;
+          color: blue;
+          border: none;
+          background-color: transparent;
+          cursor : pointer;
+        }
+      }
+      .content-option {
+        .complete{
+          text-decoration: none;
+          margin: 25px 0 0 10px;
+          display       : inline-block;
+          border-radius : 50%;
+          font-size     : 20pt;
+          text-align    : center;
+          cursor        : pointer;
+          padding       : 10px 5px;
+          background    : skyblue;
+          color         : white;
+          line-height   : 1em;
+          transition    : .3s;
+          box-shadow    : 4px 4px 7px #666666;
+          border        : 2px solid #ffffff;
+        }
+        .complete:hover {
+          box-shadow    : none;
+          color         : red;
+          background    : white;
+        }
+        .complete:hover { 
+          font-weight: 600;
+        }
+      }
+      .content-main:hover {
+        opacity: 0.8;
+      }
+      .content-detalis {
+        background-color:#00FFFF;
+        opacity: 0.8;
+        width: 400px;
+        margin: 10px 0 0 10px;
+        padding: 5px;
+        white-space: wrap;
+      }
+    }
+  }
+  .task-complete {
+    width: calc(100vw - 1150px);
+    border: groove 5px skyblue;
+    p {
+      color: yellow;
+      font-size: 18px;
+      margin: 5px 0 5px 10px;
+    }
+    .complete-list {
+      list-style: none;
+      color: blue;
+      opacity: 0.8;
+      width: 180px;
+      margin: 0 0 0 5px;
+      padding: 5px;
+    }
+  }
+}
+
+.Task-edit {
+  height: 100vh;
+  width: 100vw;
+  .task {
+    margin-left: 450px;
+    padding-top: 50px;
+    p {
+      color: yellow;
+      font-size: 40px;
+      margin-left: 125px;
+      font-weight: 500;
+    }
+    form {
+      .text {
+        .content {
+          width: 500px;
+          margin: 10px auto 0 auto;
+        }
+      }
+      .textarea {
+        .area {
+          white-space: pre-wrap;
+          height: 450px;
+          width: 500px;
+          margin: 10px auto 0 auto;
+        }
+      }
+      .button {
+        margin: 10px 10px 0 55px;
+        width: 400px;
+        display       : inline-block;
+        border-radius : 20%;
+        font-size     : 22px;
+        text-align    : center;
+        cursor        : pointer;
+        padding       : 8px 0px;
+        background    : #ffff1a;
+        color         : #000000;
+        line-height   : 1em;
+        transition    : .3s;
+        box-shadow    : 4px 4px 7px #666666;
+        border        : 2px solid #ffff1a;
+      }
+      .button:hover {
+        box-shadow    : none;
+        color         : #ffff1a;
+        background    : #000000;
+      }
+      .button:hover {
+        color         : #ffff1a;
+        background    : #000000;
+      }
+    }
+  }
+}
+
+footer {
+  height: 30px;
+  background-color: black;
+  color: #ffffff;
+  p {
+    color: #ffffff;
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+    font-weight: 300;
+    font-family: serif;
+  }
+}
