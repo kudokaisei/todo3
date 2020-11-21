@@ -24,7 +24,7 @@ class TasksController < ApplicationController
   end
 
   def task_params
-    params.permit(:task, :detalis).merge(user_id: current_user.id)
+    params.require(:task).permit(:task, :detalis).merge(user_id: current_user.id)
   end
 
 end
